@@ -19,6 +19,13 @@ public abstract class Calculations {
 		this.x = x;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Calculations [y=" + y + ", x=" + x + "]";
+	}
+	
 	public abstract double calculateCircumference();
 	
 	public abstract double calculateArea();
