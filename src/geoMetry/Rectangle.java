@@ -5,13 +5,10 @@ public class Rectangle extends Calculations{
 	private double length;
 	private double width;
 	
-	public Rectangle() {
-		super();
-		
-	}
+	
 	
 	public Rectangle(double x, double y, double length, double width) {
-		super();
+		super(x, y);
 		this.length = length;
 		this.width = width;
 	}
