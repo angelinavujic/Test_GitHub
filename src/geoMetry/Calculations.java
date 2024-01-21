@@ -5,6 +5,12 @@ public abstract class Calculations {
 	private double y;
 	private double x;
 	
+	public Calculations(double y, double x) {
+		super();
+		this.y = y;
+		this.x = x;
+	}
+	
 	
 	public double getY() {
 		return y;
@@ -25,6 +31,7 @@ public abstract class Calculations {
 	public String toString() {
 		return "Calculations [y=" + y + ", x=" + x + "]";
 	}
+	
 	
 	public abstract double calculateCircumference();
 	
