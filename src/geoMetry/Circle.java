@@ -4,12 +4,25 @@ public class Circle extends Calculations {
 	
 	private double radius;
 
-	
 	public Circle(double y, double x, double radius) {
 		super(y, x);
 		this.radius = radius;
 	}
 	
+	
+	
+	public double getRadius() {
+		return radius;
+	}
+
+
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+
+
+
 	@Override
 	public double calculateArea() {
 		return Math.PI * radius * radius;
