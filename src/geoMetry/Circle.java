@@ -24,12 +24,18 @@ public class Circle extends Calculations {
 
 
 	@Override
+	/**
+	 * calculates area of Circle by using Math.Pi
+	 */
 	public double calculateArea() {
 		return Math.PI * radius * radius;
 		
 	}
 
 	@Override
+	/**
+	 * calculates circumference of Circle by using Math.PI
+	 */
 	public double calculateCircumference() {
 		return 2 * Math.PI * radius;
 	}
