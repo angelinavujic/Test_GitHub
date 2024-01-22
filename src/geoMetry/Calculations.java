@@ -32,9 +32,16 @@ public abstract class Calculations {
 		return "Calculations [y=" + y + ", x=" + x + "]";
 	}
 	
-	
+	/**
+	 * abstract method for calculations of circumferences
+	 * @return
+	 */
 	public abstract double calculateCircumference();
 	
+	/**
+	 * abstract method for calculations of areas
+	 * @return
+	 */
 	public abstract double calculateArea();
 	
 	
