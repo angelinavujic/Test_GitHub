@@ -40,10 +40,17 @@ public class Rectangle extends Calculations{
 
 
 	@Override
+	/**
+	 * calculates area of Rectangle
+	 */
 	public double calculateCircumference() {
 		return (2*this.length) + (2*this.width);
 	}
-
+	
+	
+	/**
+	 * calculates area of Rectangle
+	 */
 	@Override
 	public double calculateArea() {
 		return this.length *this.width;
