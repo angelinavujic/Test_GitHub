@@ -11,14 +11,26 @@ public class Group {
         
 	}
 	
+	/**
+	 * Adds shapes to the list
+	 * @param shape
+	 */
 	public void addShape(Calculations shape) {
         shapes.add(shape);
     }
 	
+	/**
+	 * removes shapes from the list
+	 * @param shape
+	 */
 	public void removeShape(Calculations shape) {
         shapes.remove(shape);
     }
 	
+	/**
+	 * calculates total area of all shapes
+	 * @return
+	 */
 	public double calculateTotalArea() {
         double totalArea = 0;
         for (Calculations shape : shapes) {
@@ -27,6 +39,10 @@ public class Group {
         return totalArea;
     }
 	
+	/**
+	 * calculates total Circumference of all shapes
+	 * @return
+	 */
 	public double calculateTotalCircumference() {
         double totalCircumference = 0;
         for (Calculations shape : shapes) {
@@ -35,6 +51,10 @@ public class Group {
         return totalCircumference;
     }
 	
+	/***
+	 * finds largest shape based on largest area
+	 * @return
+	 */
 	public Calculations findLargestShape() {
 		  if (shapes.isEmpty()) {
 	            return null;
@@ -50,7 +70,9 @@ public class Group {
 	    }
         
     
-	
+	/**
+	 * prints all shapes
+	 */
 	public void printAllShapes() {
         for (Calculations shape : shapes) {
             System.out.println(shape.toString()); 
