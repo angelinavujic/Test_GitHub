@@ -18,16 +18,27 @@ public class Triangle extends Calculations {
         this.base = calculateBase();
 	}
     
+    
+    /**
+     * calculates base of each triangle
+     * @return
+     */
     private double calculateBase() {
         return 2 * Math.sqrt(site1*site1 - 0.25*height*height);
     }
 
 	@Override
+	/**
+	 * calculates circumference of triangle
+	 */
 	public double calculateCircumference() {
 		 return site1 + site2 + site3;
 	}
 
 	@Override
+	/**
+	 * calculates area of triangle by using the base which was already calculated
+	 */
 	public double calculateArea() {
 		return 0.5 * base * height;
 	}
