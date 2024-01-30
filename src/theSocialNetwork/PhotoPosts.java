@@ -1,18 +1,20 @@
 package theSocialNetwork;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+
 
 public class PhotoPosts extends MessageFacts{
 	
 	private String dataName;
 	private String headline;
-	public PhotoPosts(String username, LocalDate postingTime, ArrayList<String> comments, int likes,
-					  String dataName, String headline) {
-		super(username, postingTime, comments, likes);
+	
+	
+	
+	
+	
+	public PhotoPosts(String username, String dataName, String headline) {
+		super(username);
 		this.dataName = dataName;
 		this.headline = headline;
-		
 	}
 	
 	
