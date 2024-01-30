@@ -6,16 +6,16 @@ import java.util.ArrayList;
 public abstract class MessageFacts {
 	private String username;
 	private LocalDate postingTime;
-	private ArrayList<String>comments;
+	private ArrayList<Comment>comments;
 	private int likes;
 	
 	
-	public MessageFacts(String username, LocalDate postingTime, ArrayList<String> comments, int likes) {
+	public MessageFacts(String username) {
 		super();
 		this.username = username;
-		this.postingTime = postingTime;
-		this.comments = comments;
-		this.likes = likes;
+		this.postingTime = LocalDate.now();
+		this.comments = new ArrayList<>();
+		this.likes = 0;
 	}
 
 
@@ -39,12 +39,13 @@ public abstract class MessageFacts {
 	}
 
 
-	public ArrayList<String> getComments() {
+	
+	public ArrayList<Comment> getComments() {
 		return comments;
 	}
 
 
-	public void setComments(ArrayList<String> comments) {
+	public void setComments(ArrayList<Comment> comments) {
 		this.comments = comments;
 	}
 
