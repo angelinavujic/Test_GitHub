@@ -6,6 +6,7 @@ public class PhotoPosts extends MessageFacts{
 	
 	private String dataName;
 	private String headline;
+	private String photo;
 	
 	
 	
@@ -30,12 +31,19 @@ public class PhotoPosts extends MessageFacts{
 	public void setHeadline(String headline) {
 		this.headline = headline;
 	}
+	public String photo() {
+		return photo;
+	}
+	public void photo(String photo) {
+		this.photo = photo;
+	}
 
 
 	@Override
 	public String toString() {
 		return "new Photo: "
 				+ headline 
+				+ "\n\t" + photo
 				+ "\n\t" + dataName;
 	}
 	
