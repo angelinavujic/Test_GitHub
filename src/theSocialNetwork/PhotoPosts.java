@@ -30,6 +30,15 @@ public class PhotoPosts extends MessageFacts{
 	public void setHeadline(String headline) {
 		this.headline = headline;
 	}
+
+
+	@Override
+	public String toString() {
+		return "new Photo: "
+				+ headline 
+				+ "\n\t" + dataName;
+	}
+	
 	
 	
 	
