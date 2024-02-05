@@ -24,6 +24,15 @@ public class Messages extends MessageFacts {
 	public void setMessageText(String messageText) {
 		this.messageText = messageText;
 	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "newMessage:" + messageText;
+	}
+	
 	
 
 }
