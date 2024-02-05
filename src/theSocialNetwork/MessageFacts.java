@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public abstract class MessageFacts {
 	private String username;
-	private LocalDate postingTime;
+	private LocalDate timestamp;
 	private ArrayList<Comment>comments;
 	private int likes;
 	
@@ -13,7 +13,7 @@ public abstract class MessageFacts {
 	public MessageFacts(String username) {
 		super();
 		this.username = username;
-		this.postingTime = LocalDate.now();
+		this.timestamp = LocalDate.now();
 		this.comments = new ArrayList<>();
 		this.likes = 0;
 	}
@@ -30,12 +30,12 @@ public abstract class MessageFacts {
 
 
 	public LocalDate getPostingTime() {
-		return postingTime;
+		return timestamp;
 	}
 
 
 	public void setPostingTime(LocalDate postingTime) {
-		this.postingTime = postingTime;
+		this.timestamp = postingTime;
 	}
 
 
@@ -58,6 +58,8 @@ public abstract class MessageFacts {
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
+	
+	
 	
 	
 	
