@@ -58,6 +58,16 @@ public abstract class MessageFacts {
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
+
+
+	@Override
+	public String toString() {
+		return "username " + username + "--------------" + timestamp + 
+				"\n\t" + "comments:" + comments + "--------------" + "likes:"
+				+ likes;
+	}
+	
+	
 	
 	
 	
