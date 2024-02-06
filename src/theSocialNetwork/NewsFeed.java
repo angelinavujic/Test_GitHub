@@ -22,6 +22,30 @@ public class NewsFeed {
 	}
 	
 	
+	public void addToNewsFeed(MessageFacts m) {
+		this.feedPosts.add(m);
+	}
+	
+	public void printNewsFeed() {
+		for(MessageFacts m : this.feedPosts) {
+			System.out.println(m);
+	}
+	}
+		
+	
+		public void printPostPerName(String username) {
+		for(MessageFacts m : this.feedPosts) {
+			if(m.getUsername().equals(username)) {
+				System.out.println(m);
+			}else {
+				System.out.println("User not found");
+			}
+		}
+		
+	
+}
+	
+	
 	
 	
 	
