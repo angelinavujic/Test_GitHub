@@ -6,9 +6,9 @@ public class NewsFeed {
 	
 	private ArrayList<MessageFacts>feedPosts;
 
-	public NewsFeed(ArrayList<MessageFacts> feedPosts) {
+	public NewsFeed() {
 		super();
-		this.feedPosts = feedPosts;
+		this.feedPosts = new ArrayList<MessageFacts>();
 	}
 
 	
@@ -26,20 +26,27 @@ public class NewsFeed {
 		this.feedPosts.add(m);
 	}
 	
+	public void removeFromNewsFeed(MessageFacts m) {
+		this.feedPosts.remove(m);
+	}
+	
 	public void printNewsFeed() {
 		for(MessageFacts m : this.feedPosts) {
 			System.out.println(m);
 	}
-	}
+}
 		
 	
 		public void printPostPerName(String username) {
+		boolean userFound = false;
 		for(MessageFacts m : this.feedPosts) {
 			if(m.getUsername().equals(username)) {
 				System.out.println(m);
-			}else {
-				System.out.println("User not found");
+				userFound = true;
 			}
+		}
+		if(userFound = false) {
+			System.out.println("User not found");
 		}
 		
 	
