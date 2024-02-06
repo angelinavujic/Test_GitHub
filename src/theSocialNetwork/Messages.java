@@ -1,7 +1,6 @@
 package theSocialNetwork;
 
 
-
 public class Messages extends MessageFacts {
 	
 	private String messageText;
@@ -30,7 +29,12 @@ public class Messages extends MessageFacts {
 
 	@Override
 	public String toString() {
-		return "newMessage:" + messageText;
+		return 
+			this.getUsername() + " -------------- " + this.getPostingTime() +
+			"\n\t" + "Message: " + this.getMessageText() + 
+			"\n\t" + 
+			"\n\t" + "comments:" + this.getComments() + "--------------" + "likes:"
+			+ this.getLikes();
 	}
 	
 	
