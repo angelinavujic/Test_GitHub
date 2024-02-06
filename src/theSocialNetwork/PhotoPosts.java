@@ -12,10 +12,11 @@ public class PhotoPosts extends MessageFacts{
 	
 	
 	
-	public PhotoPosts(String username, String dataName, String headline) {
+	public PhotoPosts(String username, String dataName, String headline, String photo) {
 		super(username);
 		this.dataName = dataName;
 		this.headline = headline;
+		this.photo = "[photo]";
 	}
 	
 	
@@ -41,10 +42,16 @@ public class PhotoPosts extends MessageFacts{
 
 	@Override
 	public String toString() {
-		return "new Photo: "
-				+ headline 
-				+ "\n\t" + photo
-				+ "\n\t" + dataName;
+		return "|" + this.getUsername() + " -------------- " + this.getPostingTime() +
+				"\n" + 
+				"|" + this.getHeadline() +
+				"\n" + "           " + this.photo() + 
+				"\n" + 
+				"|" + this.getDataName() +
+				"\n" + "|"+ "comments:" + this.getComments() + "--------------" + "likes:"
+				+ this.getLikes() +
+				"\n";
+		
 	}
 	
 	

@@ -31,10 +31,14 @@ public class Messages extends MessageFacts {
 	public String toString() {
 		return 
 			this.getUsername() + " -------------- " + this.getPostingTime() +
-			"\n\t" + "Message: " + this.getMessageText() + 
-			"\n\t" + 
-			"\n\t" + "comments:" + this.getComments() + "--------------" + "likes:"
-			+ this.getLikes();
+			"\n" + 
+			"|" +
+			"\n" + "Message: " + this.getMessageText() + 
+			"\n" + 
+			"|" +
+			"\n" + "comments:" + this.getComments() + "--------------" + "likes:"
+			+ this.getLikes() +
+			"\n";
 	}
 	
 	
