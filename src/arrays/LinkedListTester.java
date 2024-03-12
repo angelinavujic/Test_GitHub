@@ -33,5 +33,7 @@ public class LinkedListTester {
 			System.out.println(iterator.next());
 		}
 	}
+	
+	
 
 }
