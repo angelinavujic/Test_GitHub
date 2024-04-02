@@ -14,6 +14,10 @@ public class ArrayQueue {
 		queue = new int[size];
 	}
 	
+	/**
+	 * method for adding numbers to queue
+	 * @param item
+	 */
 	public static void queueEnqueue(int item) {
 		if(rear == capacity) {
 			System.out.println("Queue ist voll.");
@@ -23,6 +27,10 @@ public class ArrayQueue {
 		}
 	}
 	
+	/**
+	 * method for deleting numbers from queue
+	 * @return
+	 */
 	public static int queueDequeue() {
 		int firstElement = 0;
 		if(rear == front) {
@@ -41,6 +49,9 @@ public class ArrayQueue {
 		return firstElement;
 	}
 	
+	/**
+	 * prints out elements of queue
+	 */
 	public static void queueDisplay() {
 		if(rear == front) {
 			System.out.println("Queue ist leer");
@@ -51,6 +62,10 @@ public class ArrayQueue {
 		}
 	}
 	
+	/**
+	 * shows first element of queue
+	 * @return
+	 */
 	public static int queueFront() {
 		int firstElement = 0;
 		if(rear == front) {
