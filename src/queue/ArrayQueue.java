@@ -50,5 +50,15 @@ public class ArrayQueue {
 			}
 		}
 	}
+	
+	public static int queueFront() {
+		int firstElement = 0;
+		if(rear == front) {
+			System.out.println("Queue ist leer");
+		} else {
+			firstElement = queue[front];
+		}
+		return firstElement;
+	}
 
 }
