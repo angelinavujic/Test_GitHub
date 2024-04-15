@@ -18,7 +18,7 @@ public class ArrayQueue {
 	 * method for adding numbers to queue
 	 * @param item
 	 */
-	public static void queueEnqueue(int item) {
+	public void queueEnqueue(int item) {
 		if(rear == capacity) {
 			System.out.println("Queue ist voll.");
 		} else {
@@ -31,7 +31,7 @@ public class ArrayQueue {
 	 * method for deleting numbers from queue
 	 * @return
 	 */
-	public static int queueDequeue() {
+	public int queueDequeue() {
 		int firstElement = 0;
 		if(rear == front) {
 			System.out.println("Queue ist leer");
