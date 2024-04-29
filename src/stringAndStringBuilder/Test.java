@@ -1,3 +1,4 @@
+package stringAndStringBuilder;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,5 +30,15 @@ public class Test {
             }
         }
         return false; // Kein Token erfüllt alle Kriterien
+    }
+    
+    
+    public static void main(String[] args) {
+        String password = "12345671Ga";
+        if (isGoodPassword(password) {
+            System.out.println("Das Passwort ist sicher.");
+        } else {
+            System.out.println("Das Passwort ist nicht sicher.");
+        }
     }
 }

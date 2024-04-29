@@ -1,52 +1,37 @@
 package stringAndStringBuilder;
 
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class PasswordTester {
 	
 	public static boolean isGoodPassword(String password) {
-		Pattern symbols = Pattern.compile(".*[!@#$%^&*()\\[\\]{}|<>?].*");
-		Pattern digit = Pattern.compile("\\d");
-		Pattern capitalLetter = Pattern.compile("[A-Z]");
-		Pattern lowercasePattern = Pattern.compile(".*[a-z].*");
-		Pattern lengthPattern = Pattern.compile("^.{8,}$");
 		
-		Matcher symbolMatcher = symbols.matcher(password);
-		Matcher digitMatcher = digit.matcher(password);
-		Matcher captialMatcher = capitalLetter.matcher(password);
-		Matcher lowercaseMatcher = lowercasePattern.matcher(password);
-		Matcher lengthMatcher = lengthPattern.matcher(password);
-		
-		
-		
-		if(!symbolMatcher.matches()) {
-			System.err.println("The password does not contain a sepcial Symbol");
-			return false;
-		}
-		
-		if(!digitMatcher.matches()) {
-			System.err.println("The password does not contain a digit");
-			return false;
-		}
-		
-		if(!captialMatcher.matches()) {
-			System.err.println("The password does not cotain a capital Letter");
-			return false;
-		}
-		
-		if(!lowercaseMatcher.matches()) {
-			System.err.println("The passweord does not contain a lowercase Letter");
-			return false;
-		}
-		
-		if(!lengthMatcher.matches()) {
-			System.err.println("The password is not long enough! Please try again!");
-			return false;
-		}
-		return true;
-			}
+	  if (password == null || password.length() < 8) {
+      	System.err.println("The password should have at least 8 signs.\n");
+      	return false;
+      }
+
+      if (!password.matches(".*[A-Z].*")) {
+          System.err.println("The password should contain at least one capital letter.\n");
+          return false;
+      }
+
+      if (!password.matches(".*[a-z].*")) {
+      	System.err.println("The password should contain at least one small letter.\n");
+      	return false;
+      }
+
+      if (!password.matches(".*\\d.*")) {
+      	System.err.println("The password should contain at least one digit.\n");
+      	return false;
+      }
+
+      if (!password.matches(".*[!@#$%^&*()-_=+\\|\\[{\\]};:'\",<.>/?].*")) {
+      	System.err.println("The password should contain at least one special symbol.\n");
+      	return false;
+      }
+      
+      return true;
+  }
 	
 
 	    public static void main(String[] args) {
