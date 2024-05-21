@@ -9,6 +9,9 @@ public class ElectronicDevice {
 		this.setName(name);
 		this.setWatt(watt);
 	}
+	public ElectronicDevice() {
+		
+	}
 	
 	
 	public String getName() {
